@@ -1,0 +1,432 @@
+* {
+    box-sizing:border-bx;
+    padding:0;
+    margin:0;
+}
+:root{
+    --main-color:#19c8fa;
+    --scendry-color: rgba(15 116 143 /60%);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Bree Serif', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+.contaniner{
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+min-height: 84px;
+}
+
+@media (min-width:768px){
+    .contaniner{
+        width: 750px;
+    }
+    
+}
+
+@media (min-width:992px){
+    .contaniner{
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px){
+    .contaniner{
+        width: 1170px;
+    }
+}
+header .contaniner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header .contaniner::after{
+    content:'';
+    position:absolute;
+    height: 2px;
+    width:calc(100% - 30px);
+    background-color:rgba(136, 167, 175); 
+    bottom: 0px;
+    left:15px;
+}
+a img {
+width:50px;    
+border-radius: 50%; 
+}
+nav{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    color:black;
+    padding:30px 15px;
+    font-size:20px;
+    text-decoration: none;
+    transition:.3s;
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul li a:hover , nav ul :nth-child(1) a{
+    color:var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+
+}
+
+.forme{
+    margin-left: 45px;
+    border-left: 2px solid red;
+    padding-left: 8px;
+    height: 30px;
+    width: 19px;
+    position: relative;
+}
+.forme i{
+    position:absolute;
+    top: 25%;
+}
+.togglee-menu{
+    font-size: 20px;
+    display:none;
+}
+@media (max-width:768px){
+    nav ul{
+        display:none;
+    }
+    nav .togglee-menu:hover +ul {
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        width:100%;
+        left: 2px;
+        top:100%;
+        /* border-bottom: 1px solid var(--main-color); */
+        z-index:2;
+        background-color: rgb( 0 0 0 /70%);
+    } 
+    nav ul li a{
+        padding-bottom: 5px !important;    
+    }
+    .togglee-menu{
+        display: block;
+    }
+    
+}
+header{
+    position:absolute;
+    z-index:2;
+    width: 100%;
+}
+.landing{
+    height:100vh;
+    background-color: bisque;
+   background-image: url(../img/landing.png);
+   background-size: cover;
+   position: relative;
+}
+.landing .overlay{
+    position: absolute;
+    background-color:var(--scendry-color);
+    width: 100%;
+    height: 100%;
+}
+.landing .overlay .txt{
+    position: absolute;
+    top: 35%;
+    left:7%;
+    background-color:var(--scendry-color);
+    padding: 20px;
+    width: 50%;
+    font-family: 'Bree Serif', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Lato', sans-serif;
+    display:flex;
+    justify-content: flex-end;
+     border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+@media(max-width:668px){
+    .landing .overlay .txt{
+        width: 80%;
+        top:20%;
+        left:0px;
+    }
+}
+.content{
+    max-width: 400px;
+}
+.content p{
+    line-height:25px;
+
+}
+.content h1{
+    font-size:1em;
+}
+.photo-me {
+    position: absolute;
+    width:25%;
+    left: 1%;
+    top:25%;
+ }
+.photo-me img{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+@media(max-width:1070px){
+    .photo-me{
+        display: none;
+    }
+}
+.icon-le{
+    font-size:20px;
+    position: absolute;
+    top:50%;
+    left:10px;
+    color:white;
+    padding: 5px;
+}
+.icon-ri{
+    font-size:20px;
+    position: absolute;
+    top:50%;
+    right:10px;
+    color:white;
+    padding: 5px;
+    
+}
+.icon-ri:hover ,.icon-le:hover{
+    background-color: #0048ff54;
+    border-radius: 10px;
+}
+.circ-ul { 
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 2%;
+    right:calc(50% - 30px);
+}
+.circ-ul li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    list-style-type: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-left:2px ;
+}
+.circ-ul :nth-child(2){
+    background-color:var(--main-color);
+}
+@media(max-width:668px){
+    
+    .content h3{
+        font-size:20px;
+    }
+    .icon-le ,.icon-ri{
+        display:none;
+    }
+
+}
+.div-icon{
+    width:100%
+}
+.about-services{
+    padding:20px;
+    
+}
+.about-services h1{
+    position: relative;
+    text-align: center;
+}
+.about-services p{ 
+    text-align: center;
+    font-size: 20px;
+}
+.about-services h1::before{
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    width: 115px;
+    left:50%;
+    transform: translateX(-50%);
+    height: 13px;
+    border-bottom: 2px solid black;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.about-services h1::after{
+    content: '';
+    position: absolute;
+    bottom: -17px;
+    width: 10px;
+    left:50%;
+    height: 13px;
+    border: 1px solid black;
+    background-color:white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 1;
+}
+.contaniner .display-ser{
+    display:grid;
+    grid-template-columns: 30% 30%;
+    justify-content: space-evenly;
+    row-gap: 40px;
+    column-gap: 130px;
+}
+.contaniner .display-ser .data-ser{
+    font-family: 'Bree Serif', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Lato', sans-serif;
+   
+}
+@media(max-width:800px){
+    .contaniner .display-ser{
+        grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+        margin-left:25%;
+    }
+}
+.data-ser p{
+    width: 312px;
+}
+.data-ser h2{
+    min-width:290px;
+    color: var(--main-color);
+
+}
+.data-ser i{
+    font-size:35px;
+}
+.design{
+    position: relative;
+    height: 600px; 
+    /* background-image: url(../img/p1.png); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.design .img , .design .descrebtion{
+    /* position: absolute; */
+    
+}
+.design .img {
+    width: 400px;
+    overflow: hidden;
+}
+.descrebtion ul {
+    list-style: none;
+}
+.descrebtion ul li::before{
+    font-family: 'Font Awesome 5 free';
+    content: "\e163";
+    font-weight: 900;
+    /* width: 20px; 
+    height: 20px; */
+}
+.portfilo .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.portfilo .links li{
+    margin-left: 10px;
+}
+.img-contain {
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-contain .box {
+    max-width: calc(88% /4);
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-contain .box .caption{
+    position: absolute;
+    color: rgb(7, 7, 7);
+    background-color: rgb(238, 47, 69);
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    transition:  1s;
+    -webkit-transition:  1s;
+    -moz-transition:  1s;
+    -ms-transition:  1s;
+    -o-transition:  1s;
+    overflow:hidden ;
+}
+.img-contain .box:hover .caption{
+    bottom:4  px;
+    height: 40px;
+}
+.img-contain .box .img{
+    max-width: 100%;
+}
+@media(max-width: 948px){
+    .img-contain .box{
+         /* max-width: calc(92% /2); */
+    }
+}
+@media(max-width: 786px){
+    .img-contain .box{
+        max-width: 85%;
+        margin-left: 6%;  
+        margin-right: 4%;
+        overflow: visible;
+    }
+}
+.main-header{
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right:30%;
+    position: relative;
+}
+.main-header h2{
+    position: absolute;
+   left: 40px;
+   top: -20px;
+}
